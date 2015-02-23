@@ -40,23 +40,21 @@
               <h3 class="masthead-brand">GeekRSS</h3>
               <nav>
                 <ul class="nav masthead-nav">
-                  <li class="active"><a href="http://www.geekrss.com">Home</a></li>
-				  <li><a href="demo">Demo</a></li>
+                  <li><a href="../">Home</a></li>
+				  <li class="active"><a href="#">Demo</a></li>
                   <li><a href="mailto:nenew.net@gmail.com">Contact</a></li>
                 </ul>
               </nav>
             </div>
           </div>
-
-          <div class="inner cover">
-            <h1 class="cover-heading">GeekRSS</h1>
-            <p class="lead">A RSS collection is in design.</p>
-			<p class="lead">We provide a new way to convert web to feed.</p>
-            <p class="lead">
-              <a href="#" class="btn btn-lg btn-default">Learn more</a>
-            </p>
-          </div>
-
+		<form action="./controls/gethtml.php" method="get">
+			<div class="input-group">
+				<input type="text" class="form-control" placeholder="输入RSS网址" name="url">
+				<span class="input-group-btn">
+					<button class="btn btn-default" id="conform">确认</button>
+				</span>
+			</div>
+		</form>
           <div class="mastfoot">
             <div class="inner">
               <p>Supported by <a href="http://www.nenew.net">nenew</a>.</p>
@@ -75,6 +73,14 @@
     <script src="./js/jquery.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/docs.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#conform').click(function(){
+			alert( $('input[name="url"]').val());
+			return false;
+			});
+		});
+	</script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="./js/ie10-viewport-bug-workaround.js"></script>
   </body>
